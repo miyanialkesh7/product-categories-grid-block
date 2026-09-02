@@ -77,8 +77,7 @@ store( 'buntywp/categories-grid', {
 						);
 				}
 			} catch ( error ) {
-				// Fetch/network failure: fall through to `finally`, which
-				// resets the loading state and leaves the grid empty.
+				console.error( 'Fetch error:', error );
 			} finally {
 				context.loading = false;
 			}
